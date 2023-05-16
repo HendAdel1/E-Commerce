@@ -1,7 +1,23 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MoviesListComponent } from './movies-list/movies-list.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: "", //default route
+    component: MoviesListComponent
+  },
+  {
+    path: "movie-details/:id",
+    component: MovieDetailsComponent
+  },
+  {
+    path: "**",
+    component: NotFoundComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

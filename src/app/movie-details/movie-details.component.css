@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500&display=swap');
+
+h5{
+  color: #44D62C;
+}
+img{
+  background-color: #111111;;
+}
+.card{
+  border: none;
+  background-color: black;
+  color: white;
+}
+.list-style-price{
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+.list-style-price-b{
+  padding: 0;
+  background-color: black;
+  color: #9d9ea5;
+  text-decoration: line-through;
+  font-size: 12px;
+}
+.aStyle{
+  color:#44D62C;
+  text-decoration: none;
+  font-size: 10px;
+}
+.btn{
+  width: 100%;
+  border-radius: 3px;
+  padding: 8px 22px;
+  font-size: 13px;
+  /* font-family: 'Oswald', sans-serif; */
+  font-family: 'Saira Condensed', sans-serif;
+  text-transform: uppercase;
+  background-color: #44D62C;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+}
+
+.btn:hover{
+  /* box-shadow: #7bd66d 0px 0px 10px; */
+  background-color: #6ed85e;
+  transition: 0.3s;
+}
+.card-footer{
+  padding: 0 0 12px 18px;
+}
+.card-title{
+  height: 70px;
+}
+.txt-color{
+  color: #9d9ea5;
+}
