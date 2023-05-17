@@ -3,7 +3,7 @@
       <h1 class="mb-4">Login Form</h1>
           <div class="form-group mb-3">
               <label for="" class="mb-2">Email:</label>
-              <input required pattern="^[a-z]{3,10}[0-9]{0-5}@gmail.com|@yahoo.com" ngModel class="form-control" name="userEmail" #userEmail="ngModel">
+              <input ngModel required ngPattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'" class="form-control" name="userEmail" #userEmail="ngModel">
               <div *ngIf="userEmail.touched">
                   <p *ngIf="userEmail.errors?.['required']" class="text-danger mt-2">Email is required</p>
                   <p *ngIf="userEmail.errors?.['pattern']" class="text-danger mt-2">Email not valid</p>
