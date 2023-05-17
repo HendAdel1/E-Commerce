@@ -1,0 +1,49 @@
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-7">
+      <!-- <img
+        [src]="selectedItem?.thumbnail"
+        class="img-fluid rounded-start"
+        [alt]="selectedItem?.title"
+      /> -->
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img [src]="selectedItem?.thumbnail" class="d-block w-100" [alt]="selectedItem?.title">
+          </div>
+          <div class="carousel-item">
+            <img  [src]="selectedItem?.thumbnail" class="d-block w-100" [alt]="selectedItem?.title">
+          </div>
+          <div class="carousel-item">
+            <img  [src]="selectedItem?.thumbnail" class="d-block w-100" [alt]="selectedItem?.title">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card-body">
+        <h5 class="card-title">{{selectedItem?.title}}</h5>
+        <p class="card-text">{{selectedItem?.description }}</p>
+        <p class="card-text">
+          <small class="text-body-secondary">Last updated 3 mins ago</small>
+        </p>
+      </div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-style-price">US{{selectedItem.price | currency:'USD'}}</li>
+          <li class="list-group-item list-style-price-b">US{{selectedItem.pricebefore | currency:'USD'}}</li>
+        </ul>
+          <a class="btn mt-1" href="#!" role="button">add to cart</a>
+      </div>
+    </div>
+  </div>
+</div>

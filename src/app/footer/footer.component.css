@@ -1,0 +1,54 @@
+
+.main{
+  background-color: #3B3B3B;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.row .btn-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.linkss{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column;
+}
+.linkss a{
+  font-size: 24px ;
+  color: white;
+}
+.fa-linkedin:hover{
+  color: #0A66C2;
+  text-shadow: white 0px 0px 10px;
+  transition: 0.3s;
+}
+.fa-youtube:hover{
+  color: #c20a0a;
+  text-shadow: white 0px 0px 10px;
+  transition: 0.3s;
+}
+.fa-github:hover{
+  color: white;
+  text-shadow: white 0px 0px 10px;
+  transition: 0.3s;
+}
+.btn{
+  border: 2px solid #000000;
+  background-color: #44D62C;
+  padding: 5px 20px;
+}
+
+a{
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+}
+
+a:hover{
+  background-color: #6ed85e;
+  transition: 0.3s;
+  color: #000;
+}

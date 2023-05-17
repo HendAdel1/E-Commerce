@@ -1,0 +1,31 @@
+<!-- Child for movie-list -->
+<div class="card h-100">
+  <img
+    [src]="movieItem.thumbnail"
+    class="card-img-top img-height"
+    [alt]="movieItem.title"/>
+
+  <div class="card-body pb-0">
+    <h5 class="card-title">{{ movieItem.title}}</h5>
+    <p class="card-text txt-color">{{ movieItem.description | slice:0:50}}</p>
+  </div>
+
+  <!-- <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item bg-black pb-0">{{movieItem.price}} $</li>
+  </ul> -->
+
+  <div class="card-body">
+    <a [routerLink]='["movie-details", movieItem.id]'  class="card-link aStyle">View details ></a>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item list-style-price">US{{movieItem.price | currency:'USD'}}</li>
+      <li class="list-group-item list-style-price-b">US{{movieItem.pricebefore | currency:'USD'}}</li>
+    </ul>
+      <a class="btn mt-1" href="#!" role="button">add to cart</a>
+  </div>
+
+  <div class="card-footer">
+    <small class="text-body-secondary" [ngStyle]="{color:movieItem.stock>0 ?'white':'red'}">{{movieItem.stock | stock}}</small>
+  </div>
+</div>
