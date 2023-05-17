@@ -13,7 +13,10 @@ import { FooterComponent } from './footer/footer.component';
 import { StockPipe } from './pipes/stock.pipe';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { FormComponent } from './form/form.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,13 +29,16 @@ import { FormComponent } from './form/form.component';
     StockPipe,
     MovieDetailsComponent,
     NotFoundComponent,
-    FormComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

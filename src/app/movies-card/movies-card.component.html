@@ -8,6 +8,7 @@
   <div class="card-body pb-0">
     <h5 class="card-title">{{ movieItem.title}}</h5>
     <p class="card-text txt-color">{{ movieItem.description | slice:0:50}}</p>
+    <p class="created-date">{{ movieItem.createdAt | date:'MMMM yyyy' }}</p>
   </div>
 
   <!-- <ul class="list-group list-group-flush">

@@ -1,0 +1,97 @@
+<!-- <form class="row g-3 p-5">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">City</label>
+    <input type="text" class="form-control" id="inputCity">
+  </div>
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">State</label>
+    <select id="inputState" class="form-select">
+      <option selected>Choose...</option>
+      <option>...</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="inputZip">
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form> -->
+
+<div class="container mt-5">
+  <form class="row" [formGroup]="registrationForm" (ngSubmit)="submit()">
+      <h1 class="mb-4">Regestration Form</h1>
+      <div class="col-md-6 mb-3">
+          <label for="" class="mb-2">FirstName:</label>
+          <input type="text" class="form-control" formControlName="firstName">
+          <div *ngIf="registrationForm.controls['firstName'].touched">
+              <p *ngIf="registrationForm.controls['firstName'].errors?.['required']" class="text-danger mt-2">Frist Name is required</p>
+              <p *ngIf="registrationForm.controls['firstName'].errors?.['minlength']" class="text-danger mt-2">Min Length is 3</p>
+              <p *ngIf="registrationForm.controls['firstName'].errors?.['maxlength']" class="text-danger mt-2">Max Length is 8</p>
+          </div>
+      </div>
+      <div class="col-md-6 mb-3">
+          <label for="" class="mb-2">LastName:</label>
+          <input type="text" class="form-control" formControlName="lastName">
+          <div *ngIf="registrationForm.controls['lastName'].touched">
+              <p *ngIf="registrationForm.controls['lastName'].errors?.['required']" class="text-danger mt-2">Last Name is required</p>
+              <p *ngIf="registrationForm.controls['lastName'].errors?.['minlength']" class="text-danger mt-2">Min Length is 3</p>
+              <p *ngIf="registrationForm.controls['lastName'].errors?.['maxlength']" class="text-danger mt-2">Max Length is 8</p>
+          </div>
+      </div>
+      <div class="form-group mb-3">
+          <label for="" class="mb-2">Email:</label>
+          <input type="email" class="form-control" formControlName="email">
+          <div *ngIf="registrationForm.controls['email'].touched">
+              <p *ngIf="registrationForm.controls['email'].errors?.['required']" class="text-danger mt-2">Email is required</p>
+              <p *ngIf="registrationForm.controls['email'].errors?.['email']" class="text-danger mt-2">Email not valid</p>
+          </div>
+      </div>
+      <div class="form-group mb-3">
+          <label for="" class="mb-2">Password:</label>
+          <input type="password" class="form-control" formControlName="password">
+          <div *ngIf="registrationForm.controls['password'].touched">
+              <p *ngIf="registrationForm.controls['password'].errors?.['required']" class="text-danger mt-2">password is required</p>
+              <p *ngIf="registrationForm.controls['password'].errors?.['pattern']" class="text-danger mt-2">password start with samll letter then from 3 to 8 number</p>
+          </div>
+      </div>
+      <div class="form-group mb-3">
+          <label for="" class="mb-2">Repeat Password:</label>
+          <input type="password" class="form-control" formControlName="repeatPassword">
+          <div *ngIf="registrationForm.controls['repeatPassword'].touched">
+              <p *ngIf="registrationForm.controls['repeatPassword'].errors?.['required']" class="text-danger mt-2">password is required</p>
+              <p *ngIf="!registrationForm.controls['repeatPassword'].errors && registrationForm.controls['password'].value !== registrationForm.controls['repeatPassword'].value" class="text-danger mt-2">password not match</p>
+          </div>
+      </div>
+      <div class="btn-sub">
+        <button [disabled]="registrationForm.invalid || registrationForm.controls['password'].value !== registrationForm.controls['repeatPassword'].value" type="submit" class="mb-2 btn">Submit</button>
+      </div>
+      <a routerLink="/login" class="text-decoration-none text-center mb-3">Already have account! Login</a>
+  </form>
+
+</div>

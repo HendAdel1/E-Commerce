@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { FormComponent } from './form/form.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -15,8 +16,12 @@ const routes: Routes = [
     component: MovieDetailsComponent
   },
   {
-    path: "form",
-    component: FormComponent
+    path: "register",
+    component: RegisterComponent
+  },
+  {
+    path: "login",
+    component: LoginComponent
   },
   {
     path: "**",
