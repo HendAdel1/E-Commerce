@@ -18,7 +18,7 @@
   </ul> -->
 
   <div class="card-body">
-    <a [routerLink]='["movie-details", movieItem.id]'  class="card-link aStyle">View details ></a>
+    <a [routerLink]='["movie-details", movieItem.id, movieItem.title]'  class="card-link aStyle">View details ></a>
     <ul class="list-group list-group-flush">
       <li class="list-group-item list-style-price">US{{movieItem.price | currency:'USD'}}</li>
       <li class="list-group-item list-style-price-b">US{{movieItem.pricebefore | currency:'USD'}}</li>

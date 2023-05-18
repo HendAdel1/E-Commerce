@@ -11,7 +11,7 @@
           </div>
           <div class="form-group mb-3">
               <label for="" class="mb-2">Password:</label>
-              <input required ngModel ngPattern="^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}" type="password" class="form-control" name="userPassword" #userPassword="ngModel">
+              <input ngModel required ngPattern="^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}" type="password" class="form-control" name="userPassword" #userPassword="ngModel">
                <div *ngIf="userPassword.touched">
                   <p *ngIf="userPassword.errors?.['required']" class="text-danger mt-2">password is required</p>
                   <p *ngIf="userPassword.errors?.['pattern']" class="text-danger mt-2">password must be at least 8 characters, combination of uppercase, lowercase letters, and the special characters</p>
